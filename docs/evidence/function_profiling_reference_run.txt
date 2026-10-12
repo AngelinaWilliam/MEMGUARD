@@ -1,0 +1,13 @@
+[Info] OUT Scale 6.00 1.00
+[Info] OUT IsBig 1 0
+[Info] OUT MakeName player_7
+[Info] OUT SetRef 300 9
+[Info] OUT SetRef2 -1
+[Info] OUT SumArgs 10
+[Info] OUT Fib 55
+[Info] OUT Pick 10 12 7
+[Info] OUT Void 2
+[Info] OUT Outer 14987
+[Info] OUT Public 7 7
+[Info] OUT instrumented=0
+[Info] MGTEST SUMMARY not instrumented - functional reference run only

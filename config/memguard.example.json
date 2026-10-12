@@ -1,0 +1,24 @@
+{
+	"memguard": {
+		"enable": true,
+		"profile_natives": true,
+		"track_pools": true,
+		"log_level": "info",
+		"report_interval": 300,
+		"snapshot_interval": 60,
+		"report_file": "memguard_report.txt",
+		"report_append": false,
+		"report_to_console": false,
+		"top_n": 15,
+		"history_size": 120,
+		"warmup_seconds": 120,
+		"growth_window": 6,
+		"growth_min_percent": 10,
+		"growth_min_count": 10,
+		"growth_min_mb": 8,
+		"slow_native_us": 5000,
+		"warn_cooldown": 60,
+		"outstanding_limit": 20,
+		"recent_free_capacity": 4096
+	}
+}

@@ -1,0 +1,39 @@
+MemGuard X instrumentation manifest
+root: C:\Users\PC\MemGuardX\pawn
+
+examples\profiling_example.pwn: 1 of 7 functions instrumented
+  line 32  [profiled] main
+  line 39  [skipped]  CreateHouse  (already contains MEMGUARD_FUNC)
+  line 59  [skipped]  DeleteHouse  (already contains MEMGUARD_FUNC)
+  line 71  [skipped]  DistanceToNearestHouse  (already contains MEMGUARD_FUNC)
+  line 91  [skipped]  OnGameModeInit  (already contains MEMGUARD_FUNC)
+  line 108  [skipped]  HouseMaintenance  (already contains MEMGUARD_FUNC)
+  line 127  [skipped]  OnPlayerConnect  (already contains MEMGUARD_FUNC)
+memguard_test.pwn: 4 of 4 functions instrumented
+  line 15  [profiled] Check
+  line 29  [profiled] main
+  line 34  [profiled] LeakTimer
+  line 52  [profiled] OnGameModeInit
+tests\function_profiling_test.pwn: 21 of 22 functions instrumented
+  line 16  [profiled] Check
+  line 30  [profiled] Calls
+  line 37  [profiled] Probe
+  line 42  [profiled] Scale
+  line 51  [profiled] IsBig
+  line 56  [profiled] MakeName
+  line 63  [profiled] SetRef
+  line 76  [profiled] SumArgs
+  line 86  [profiled] Fib
+  line 95  [profiled] Pick
+  line 110  [profiled] NoReturnValue
+  line 115  [profiled] Busy
+  line 125  [profiled] Inner
+  line 130  [profiled] Outer
+  line 136  [profiled] PublicTarget
+  line 145  [profiled] Trivial
+  line 150  [skipped]  Trivial_NoProf  (excluded)
+  line 155  [profiled] Faulty
+  line 164  [profiled] main
+  line 168  [profiled] OnGameModeInit
+  line 268  [profiled] FaultyTimer
+  line 277  [profiled] AfterFaultTimer

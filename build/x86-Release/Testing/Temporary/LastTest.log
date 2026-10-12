@@ -1,0 +1,195 @@
+Start testing: Oct 12 14:28 Malay Peninsula Standard Time
+----------------------------------------------------------
+1/3 Testing: memguardx_unit_tests
+1/3 Test: memguardx_unit_tests
+Command: "C:/Users/PC/MemGuardX/build/x86-Release/memguardx_tests.exe"
+Directory: C:/Users/PC/MemGuardX/build/x86-Release
+"memguardx_unit_tests" start time: Oct 12 14:28 Malay Peninsula Standard Time
+Output:
+----------------------------------------------------------
+[ RUN  ] tracker_alloc_and_free_updates_counts_and_bytes
+[  OK  ] tracker_alloc_and_free_updates_counts_and_bytes
+[ RUN  ] tracker_categories_are_independent
+[  OK  ] tracker_categories_are_independent
+[ RUN  ] tracker_null_pointer_semantics
+[  OK  ] tracker_null_pointer_semantics
+[ RUN  ] tracker_unknown_free_is_reported_not_counted_as_release
+[  OK  ] tracker_unknown_free_is_reported_not_counted_as_release
+[ RUN  ] tracker_double_free_requires_evidence
+[  OK  ] tracker_double_free_requires_evidence
+[ RUN  ] tracker_double_free_history_is_bounded
+[  OK  ] tracker_double_free_history_is_bounded
+[ RUN  ] tracker_duplicate_alloc_replaces_entry
+[  OK  ] tracker_duplicate_alloc_replaces_entry
+[ RUN  ] tracker_outstanding_sorted_oldest_first_and_limited
+[  OK  ] tracker_outstanding_sorted_oldest_first_and_limited
+[ RUN  ] tracker_snapshot_is_consistent
+[  OK  ] tracker_snapshot_is_consistent
+[ RUN  ] tracker_disabled_records_nothing
+[  OK  ] tracker_disabled_records_nothing
+[ RUN  ] tracker_reset_and_forget
+[  OK  ] tracker_reset_and_forget
+[ RUN  ] tracker_concurrent_alloc_free_is_exact
+[  OK  ] tracker_concurrent_alloc_free_is_exact
+[ RUN  ] profiler_counts_and_accumulates
+[  OK  ] profiler_counts_and_accumulates
+[ RUN  ] profiler_zone_registration_is_idempotent
+[  OK  ] profiler_zone_registration_is_idempotent
+[ RUN  ] profiler_nested_self_time
+[  OK  ] profiler_nested_self_time
+[ RUN  ] profiler_abandoned_frames_are_discarded_not_invented
+[  OK  ] profiler_abandoned_frames_are_discarded_not_invented
+[ RUN  ] profiler_end_zone_by_id
+[  OK  ] profiler_end_zone_by_id
+[ RUN  ] profiler_disabled_records_nothing
+[  OK  ] profiler_disabled_records_nothing
+[ RUN  ] profiler_invalid_zone_is_ignored
+[  OK  ] profiler_invalid_zone_is_ignored
+[ RUN  ] profiler_depth_limit
+[  OK  ] profiler_depth_limit
+[ RUN  ] profiler_sorting_by_time_and_calls
+[  OK  ] profiler_sorting_by_time_and_calls
+[ RUN  ] profiler_slow_threshold_counts
+[  OK  ] profiler_slow_threshold_counts
+[ RUN  ] profiler_reset_keeps_zones
+[  OK  ] profiler_reset_keeps_zones
+[ RUN  ] profiler_concurrent_recording_is_exact
+[  OK  ] profiler_concurrent_recording_is_exact
+[ RUN  ] profiler_concurrent_registration_unique_ids
+[  OK  ] profiler_concurrent_registration_unique_ids
+[ RUN  ] profiler_overhead_measurement_returns_value
+[  OK  ] profiler_overhead_measurement_returns_value
+[ RUN  ] profiler_serial_frames_close_only_their_own_frame
+[  OK  ] profiler_serial_frames_close_only_their_own_frame
+[ RUN  ] profiler_serial_after_discard_is_rejected
+[  OK  ] profiler_serial_after_discard_is_rejected
+[ RUN  ] profiler_recursion_counts_every_call
+[  OK  ] profiler_recursion_counts_every_call
+[ RUN  ] growth_detects_sustained_increase
+[  OK  ] growth_detects_sustained_increase
+[ RUN  ] growth_ignores_stable_and_noisy_series
+[  OK  ] growth_ignores_stable_and_noisy_series
+[ RUN  ] growth_respects_minimum_delta_and_window
+[  OK  ] growth_respects_minimum_delta_and_window
+[ RUN  ] snapshot_history_is_bounded_and_sequenced
+[  OK  ] snapshot_history_is_bounded_and_sequenced
+[ RUN  ] config_applies_valid_values
+[  OK  ] config_applies_valid_values
+[ RUN  ] config_rejects_invalid_values_without_side_effects
+[  OK  ] config_rejects_invalid_values_without_side_effects
+[ RUN  ] logger_filters_by_level
+[  OK  ] logger_filters_by_level
+[ RUN  ] logger_rate_limits_by_key
+[  OK  ] logger_rate_limits_by_key
+[ RUN  ] engine_tick_interval_and_periodic_snapshot
+[  OK  ] engine_tick_interval_and_periodic_snapshot
+[ RUN  ] engine_snapshot_metrics_and_growth_warning
+[  OK  ] engine_snapshot_metrics_and_growth_warning
+[ RUN  ] engine_report_contains_all_sections_and_is_written
+[  OK  ] engine_report_contains_all_sections_and_is_written
+[ RUN  ] engine_report_write_failure_is_reported
+[  OK  ] engine_report_write_failure_is_reported
+[ RUN  ] engine_commands
+[  OK  ] engine_commands
+[ RUN  ] engine_disable_stops_recording
+[  OK  ] engine_disable_stops_recording
+[ RUN  ] instrument_basic_functions_and_line_numbers
+[  OK  ] instrument_basic_functions_and_line_numbers
+[ RUN  ] instrument_ignores_non_functions
+[  OK  ] instrument_ignores_non_functions
+[ RUN  ] instrument_strings_comments_and_chars_do_not_confuse_braces
+[  OK  ] instrument_strings_comments_and_chars_do_not_confuse_braces
+[ RUN  ] instrument_skips_emit_operator_and_already_instrumented
+[  OK  ] instrument_skips_emit_operator_and_already_instrumented
+[ RUN  ] instrument_is_idempotent
+[  OK  ] instrument_is_idempotent
+[ RUN  ] instrument_names_tags_states_and_macro_headers
+[  OK  ] instrument_names_tags_states_and_macro_headers
+[ RUN  ] instrument_filters
+[  OK  ] instrument_filters
+[ RUN  ] instrument_preprocessor_lines_and_crlf
+[  OK  ] instrument_preprocessor_lines_and_crlf
+[ RUN  ] instrument_reports_syntax_errors_instead_of_guessing
+[  OK  ] instrument_reports_syntax_errors_instead_of_guessing
+[ RUN  ] instrument_directive_before_first_statement_inserts_after_brace
+[  OK  ] instrument_directive_before_first_statement_inserts_after_brace
+[ RUN  ] instrument_skips_memguard_api_functions
+[  OK  ] instrument_skips_memguard_api_functions
+[ RUN  ] memory_startup_spike_is_not_a_leak
+[  OK  ] memory_startup_spike_is_not_a_leak
+[ RUN  ] memory_warmup_in_progress
+[  OK  ] memory_warmup_in_progress
+[ RUN  ] memory_grew_then_stable_is_classified_as_plateau
+[  OK  ] memory_grew_then_stable_is_classified_as_plateau
+[ RUN  ] memory_live_heap_growth_without_tracked_growth
+[  OK  ] memory_live_heap_growth_without_tracked_growth
+[ RUN  ] memory_allocator_retention_is_not_live_growth
+[  OK  ] memory_allocator_retention_is_not_live_growth
+[ RUN  ] memory_tracked_pool_growth_is_named
+[  OK  ] memory_tracked_pool_growth_is_named
+[ RUN  ] memory_decreasing
+[  OK  ] memory_decreasing
+[ RUN  ] engine_no_growth_warning_during_warmup
+[  OK  ] engine_no_growth_warning_during_warmup
+[ RUN  ] include_api_matches_registered_natives
+[  OK  ] include_api_matches_registered_natives
+
+63 test(s) run, 0 failed, 0 failed check(s)
+<end of output>
+Test time =   1.67 sec
+----------------------------------------------------------
+Test Passed.
+"memguardx_unit_tests" end time: Oct 12 14:28 Malay Peninsula Standard Time
+"memguardx_unit_tests" time elapsed: 00:00:01
+----------------------------------------------------------
+
+2/3 Testing: memguardx_instrument_cli
+2/3 Test: memguardx_instrument_cli
+Command: "C:/Users/PC/MemGuardX/build/x86-Release/memguard_instrument.exe" "--quiet" "--out" "C:/Users/PC/MemGuardX/build/x86-Release/instrumented" "--root" "C:/Users/PC/MemGuardX/pawn" "--exclude" "Trivial_NoProf" "C:/Users/PC/MemGuardX/pawn"
+Directory: C:/Users/PC/MemGuardX/build/x86-Release
+"memguardx_instrument_cli" start time: Oct 12 14:28 Malay Peninsula Standard Time
+Output:
+----------------------------------------------------------
+MemGuard X instrumentation: 3 file(s), 26 function(s) instrumented, 7 skipped, 0 file(s) failed; output in C:\Users\PC\MemGuardX\build\x86-Release\instrumented
+<end of output>
+Test time =   0.31 sec
+----------------------------------------------------------
+Test Pass Reason:
+Required regular expression found. Regex=[ 0 file\(s\) failed]
+"memguardx_instrument_cli" end time: Oct 12 14:28 Malay Peninsula Standard Time
+"memguardx_instrument_cli" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/3 Testing: memguardx_component_load
+3/3 Test: memguardx_component_load
+Command: "C:/Users/PC/MemGuardX/build/x86-Release/memguardx_load_test.exe" "C:/Users/PC/MemGuardX/build/x86-Release/MemGuardX.dll"
+Directory: C:/Users/PC/MemGuardX/build/x86-Release
+"memguardx_component_load" start time: Oct 12 14:28 Malay Peninsula Standard Time
+Output:
+----------------------------------------------------------
+Loading C:/Users/PC/MemGuardX/build/x86-Release/MemGuardX.dll
+  [ OK ] LoadLibrary succeeded
+  [ OK ] exported symbol ComponentEntryPoint found
+  [ OK ] ComponentEntryPoint returned a component
+  [ OK ] componentName() == "MemGuard X"
+  [ OK ] getUID() matches MEMGUARDX_COMPONENT_UID
+  [ OK ] supportedVersion() == OMP_VERSION_SUPPORTED
+  [ OK ] componentVersion() matches build version
+  [ OK ] componentType() == Other
+  [ OK ] defaults: memguard.enable is a bool
+  [ OK ] defaults: memguard.report_interval = 300
+  [ OK ] defaults: memguard.log_level is a string
+  [ OK ] defaults: all memguard.* keys generated
+  [ OK ] non-default pass keeps administrator values
+  [ OK ] non-default pass fills missing keys
+  [ OK ] free() returned
+PASSED (0 failure(s))
+<end of output>
+Test time =   0.98 sec
+----------------------------------------------------------
+Test Passed.
+"memguardx_component_load" end time: Oct 12 14:28 Malay Peninsula Standard Time
+"memguardx_component_load" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: Oct 12 14:28 Malay Peninsula Standard Time

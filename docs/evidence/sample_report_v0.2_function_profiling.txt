@@ -1,0 +1,130 @@
+==================== MemGuard X report - 2026-10-12 14:19:48 ====================
+MemGuard X status
+  host: open.mp 1.5.8.3079, 32-bit process
+  started: 2026-10-12 14:19:46, uptime 1.912 s
+  recording: on, native profiling: on, pool tracking: on, log level: info
+  zones registered: 7, snapshots taken: 2 (kept 2), reports written: 0
+  profiler frame anomalies: abandoned=0 unmatched-end=0 depth-overflow=0
+  measured profiler cost per instrumented call: ~242 ns
+  log messages: 2 emitted, 0 rate-limited
+
+Top 15 native by total (inclusive) time
+  name                                 kind            calls        total         self          avg          max     slow
+  printf                               native              2     67.92 us     67.92 us     33.96 us     38.04 us        0
+
+Top 15 native by call count
+  name                                 kind            calls        total         self          avg          max     slow
+  printf                               native              2     67.92 us     67.92 us     33.96 us     38.04 us        0
+
+Top 15 native by maximum single-call time
+  name                                 kind            calls        total         self          avg          max     slow
+  printf                               native              2     67.92 us     67.92 us     33.96 us     38.04 us        0
+
+Top 15 function by total (inclusive) time
+  name                                 kind            calls        total         self          avg          max     slow
+  OnGameModeInit                       function            1     75.96 us      6.53 us     75.96 us     75.96 us        0
+  Twice                                function            1      1.51 us      1.51 us      1.51 us      1.51 us        0
+  main                                 function            1       349 ns       349 ns       349 ns       349 ns        0
+
+Top 15 function by self (exclusive) time
+  name                                 kind            calls        total         self          avg          max     slow
+  OnGameModeInit                       function            1     75.96 us      6.53 us     75.96 us     75.96 us        0
+  Twice                                function            1      1.51 us      1.51 us      1.51 us      1.51 us        0
+  main                                 function            1       349 ns       349 ns       349 ns       349 ns        0
+
+Top 15 function by call count
+  name                                 kind            calls        total         self          avg          max     slow
+  OnGameModeInit                       function            1     75.96 us      6.53 us     75.96 us     75.96 us        0
+  Twice                                function            1      1.51 us      1.51 us      1.51 us      1.51 us        0
+  main                                 function            1       349 ns       349 ns       349 ns       349 ns        0
+
+Top 15 script by total (inclusive) time
+  (no samples recorded: no MemGuard_ProfileBegin/End section was executed)
+
+Top 15 interval by total (inclusive) time
+  name                                 kind            calls        total         self          avg          max     slow
+  server.tick_interval                 interval          378      1.895 s      1.895 s      5.01 ms     10.14 ms        0
+
+Top 15 internal by total (inclusive) time
+  name                                 kind            calls        total         self          avg          max     slow
+  memguard.snapshot                    internal            2    328.46 us    328.46 us    164.23 us    196.28 us        0
+
+Tracked allocations (only what MemGuard X observes; not the whole process)
+  category                     allocs      frees     active  active size       peak    peak size      dup  unknown   double
+  pool.player                       0          0          0          n/a          0          n/a        0        0        0
+  pool.vehicle                      0          0          0          n/a          0          n/a        0        0        0
+  pool.object                       0          0          0          n/a          0          n/a        0        0        0
+  pool.textlabel                    0          0          0          n/a          0          n/a        0        0        0
+  pool.pickup                       0          0          0          n/a          0          n/a        0        0        0
+  pool.actor                        0          0          0          n/a          0          n/a        0        0        0
+  pool.gangzone                     0          0          0          n/a          0          n/a        0        0        0
+  pool.textdraw                     0          0          0          n/a          0          n/a        0        0        0
+  pool.menu                         0          0          0          n/a          0          n/a        0        0        0
+  total active: 0, total active (known sizes): 0 B, confirmed tracking errors: 0
+Oldest active tracked allocations (active != leaked)
+  (none)
+
+Snapshot history (2 stored)
+  comparing snapshot #1 (2026-10-12 14:19:46) with #2 (2026-10-12 14:19:47)
+  metric                                             before            after           change
+  tracked.pool.player.active                              0                0                0
+  tracked.pool.vehicle.active                             0                0                0
+  tracked.pool.object.active                              0                0                0
+  tracked.pool.textlabel.active                           0                0                0
+  tracked.pool.pickup.active                              0                0                0
+  tracked.pool.actor.active                               0                0                0
+  tracked.pool.gangzone.active                            0                0                0
+  tracked.pool.textdraw.active                            0                0                0
+  tracked.pool.menu.active                                0                0                0
+  process.resident_bytes                          60.47 MiB        62.37 MiB        +1.89 MiB
+  process.private_bytes                           54.08 MiB        63.34 MiB        +9.25 MiB
+  process.heap_in_use_bytes                       45.38 MiB        46.78 MiB        +1.40 MiB
+  process.heap_free_bytes                         295.3 KiB        145.9 KiB       -149.5 KiB
+  server.timers                                           0                0                0
+  server.db_connections                                   0                0                0
+  server.db_result_sets                                   0                0                0
+
+Growth analysis after warm-up (window 4 snapshots, min +10%, min +10 count / +8 MiB)
+  warm-up (120 s after server start) not finished yet: growth is not evaluated
+
+Memory assessment (phase: server start, warm-up 120 s)
+  metric                                    phase start    warm-up end            now      startup   since w-up  trend
+  tracked.pool.player.active                          0              -              0            0            -  warm-up
+  tracked.pool.vehicle.active                         0              -              0            0            -  warm-up
+  tracked.pool.object.active                          0              -              0            0            -  warm-up
+  tracked.pool.textlabel.active                       0              -              0            0            -  warm-up
+  tracked.pool.pickup.active                          0              -              0            0            -  warm-up
+  tracked.pool.actor.active                           0              -              0            0            -  warm-up
+  tracked.pool.gangzone.active                        0              -              0            0            -  warm-up
+  tracked.pool.textdraw.active                        0              -              0            0            -  warm-up
+  tracked.pool.menu.active                            0              -              0            0            -  warm-up
+  process.resident_bytes                      60.47 MiB              -      62.37 MiB    +1.89 MiB            -  warm-up
+  process.private_bytes                       54.08 MiB              -      63.34 MiB    +9.25 MiB            -  warm-up
+  process.heap_in_use_bytes                   45.38 MiB              -      46.78 MiB    +1.40 MiB            -  warm-up
+  process.heap_free_bytes                     295.3 KiB              -      145.9 KiB   -149.5 KiB            -  warm-up
+  amx.script1.heap_bytes                              0              -              0            0            -  warm-up
+  amx.script1.stack_bytes                             0              -              0            0            -  warm-up
+  server.timers                                       0              -              0            0            -  warm-up
+  server.db_connections                               0              -              0            0            -  warm-up
+  server.db_result_sets                               0              -              0            0            -  warm-up
+  Interpretation:
+  - Warm-up in progress (118 s left): changes now are classified as startup, not as growth.
+  - Process memory so far in this phase: +9.3 MiB.
+
+What MemGuard X can and cannot see
+  exact     : open.mp pool entities (counts only, no byte sizes), script-reported allocations
+              (MemGuard_TrackAlloc: counts and the sizes the script reports), timers, DB handles,
+              AMX heap/stack usage of each script
+  measured  : process resident/private memory; C heap in use / free-retained (glibc mallinfo2).
+              Whole-process numbers: they include every component and plugin and cannot be
+              attributed to individual allocations.
+  not seen  : allocations made inside other components/plugins or the server, per-player
+              objects/textdraws, memory of data structures inside the AMX beyond heap/stack usage,
+              allocator internals. A leak there shows up only as process/heap growth.
+  rule      : an active allocation is never reported as leaked; only sustained growth after warm-up is
+              flagged as a possible leak, and only double/unknown frees are confirmed tracking errors.
+
+Notes: 'active' tracked allocations are not leaks by themselves. 'POSSIBLE LEAK' means sustained growth
+across snapshots and needs investigation. Only double/unknown frees and duplicate allocations are confirmed
+tracking errors. Native times are inclusive of anything the native itself executes (e.g. CallLocalFunction).
+

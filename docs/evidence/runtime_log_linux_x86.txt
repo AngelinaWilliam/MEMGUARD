@@ -1,0 +1,156 @@
+Starting open.mp server (1.5.8.3079) from commit c6759bd8d265171ae3d86598895a23d5a8d92a3b
+Running static OpenSSL build - plugins that use OpenSSL might crash (discord-connector, pawn-requests). It's recommended to use the dynssl build.
+Loading component Menus.so
+	Successfully loaded component Menus (1.5.8.3079) with UID 621e219eb97ee0b2
+Loading component MemGuardX.so
+	Successfully loaded component MemGuard X (0.2.0.0) with UID 4208a60f1c13f660
+Loaded 23 component(s) from /omp/components
+[Info] [MemGuardX] MemGuard X 0.2.0 loaded (open.mp 1.5.8.3079, 32-bit process). Recording on, native profiling on, pool tracking on. Profiler cost ~243 ns per instrumented call.
+[Info] [MemGuardX] Ready: 9 pool watcher(s) active, Pawn integration available. Type 'memguard help' in the console.
+[Info] [MemGuardX] Attached to Pawn script id 1 (17 natives), native profiling on
+[Info] MGTEST PASS native GetMaxPlayers profiled exactly 1000 times (got 1000)
+[Info] MGTEST PASS MemGuard_ProfileEnd closes the zone (got 1)
+[Info] MGTEST PASS MemGuard_ProfileEnd closes the zone (got 1)
+[Info] MGTEST PASS MemGuard_ProfileEnd closes the zone (got 1)
+[Info] MGTEST PASS MemGuard_ProfileEnd closes the zone (got 1)
+[Info] MGTEST PASS MemGuard_ProfileEnd closes the zone (got 1)
+[Info] MGTEST PASS script zone test_section recorded 5 times (got 5)
+[Info] MGTEST PASS native format profiled inside the zone (>= 1000) (got 1000)
+[Info] MGTEST PASS ending a zone that is not open returns 0 (got 0)
+[Info] MGTEST PASS TrackAlloc id 1 (got 1)
+[Info] MGTEST PASS TrackAlloc id 2 (got 1)
+[Warning] [MemGuardX] Tracking error: MemGuard_TrackAlloc for an id that is still active (category 'script.inventory_78', id 2)
+[Info] MGTEST PASS TrackAlloc of an active id reports duplicate (got 2)
+[Info] MGTEST PASS TrackFree id 1 released (got 1)
+[Warning] [MemGuardX] Tracking error: double free (category 'script.inventory_78', id 1)
+[Info] MGTEST PASS second TrackFree id 1 is a double free (got -2)
+[Warning] [MemGuardX] Tracking error: MemGuard_TrackFree of an id that was never tracked (category 'script.inventory_78', id 77)
+[Info] MGTEST PASS TrackFree of unknown id 77 (got -1)
+[Info] MGTEST PASS inventory has 1 active entry (got 1)
+[Info] MGTEST PASS 3 vehicles tracked after CreateVehicle (got 3)
+[Info] MGTEST PASS 2 vehicles tracked after DestroyVehicle (got 2)
+[Info] MGTEST PASS MemGuard_Snapshot returns a sequence number (got 2)
+[Info] MGTEST PASS MemGuard_WriteReport succeeded (got 1)
+[Info] Legacy Network started on port 7777
+[Info] MemGuard X status
+[Info]   host: open.mp 1.5.8.3079, 32-bit process
+[Info]   started: 2026-10-12 14:20:01, uptime 5.925 s
+[Info]   recording: on, native profiling: on, pool tracking: on, log level: info
+[Info]   zones registered: 13, snapshots taken: 7 (kept 7), reports written: 2
+[Info]   profiler frame anomalies: abandoned=0 unmatched-end=1 depth-overflow=0
+[Info]   measured profiler cost per instrumented call: ~243 ns
+[Info]   log messages: 5 emitted, 0 rate-limited
+[Info] Top 5 native by call count
+[Info]   name                                 kind            calls        total         self          avg          max     slow
+[Info]   format                               native           1001    119.86 us    119.86 us       119 ns     18.67 us        0
+[Info]   GetMaxPlayers                        native           1000    104.93 us    104.93 us       104 ns      1.38 us        0
+[Info]   float                                native            180     13.14 us     13.14 us        72 ns      1.00 us        0
+[Info]   CreateObject                         native             90    679.71 us    679.71 us      7.55 us     53.93 us        0
+[Info]   printf                               native             20    631.65 us    631.65 us     31.58 us     41.94 us        0
+[Info] Rejected: top_n: value 0 out of range [1, 1000]
+[Info] MGTEST leak phase finished, objects created: 120, tracked active objects: 120
+[Info] MGTEST PASS pool.object active count matches leaked objects (got 120)
+[Info] MGTEST SUMMARY pass=21 fail=0
+[Info] Growth analysis after warm-up (window 4 snapshots, min +10%, min +10 count / +8 MiB)
+[Info]   warm-up (120 s after server start) not finished yet: growth is not evaluated
+[Info] Memory assessment (phase: server start, warm-up 120 s)
+[Info]   metric                                    phase start    warm-up end            now      startup   since w-up  trend
+[Info]   tracked.pool.player.active                          0              -              0            0            -  warm-up
+[Info]   tracked.pool.vehicle.active                         0              -              2           +2            -  warm-up
+[Info]   tracked.pool.object.active                          0              -            120         +120            -  warm-up
+[Info]   tracked.pool.textlabel.active                       0              -              0            0            -  warm-up
+[Info]   tracked.pool.pickup.active                          0              -              0            0            -  warm-up
+[Info]   tracked.pool.actor.active                           0              -              0            0            -  warm-up
+[Info]   tracked.pool.gangzone.active                        0              -              0            0            -  warm-up
+[Info]   tracked.pool.textdraw.active                        0              -              0            0            -  warm-up
+[Info]   tracked.pool.menu.active                            0              -              0            0            -  warm-up
+[Info]   tracked.script.inventory_78.active                  1              -              1            0            -  warm-up
+[Info]   tracked.script.inventory_78.bytes                50 B              -           50 B          0 B            -  warm-up
+[Info]   process.resident_bytes                      60.95 MiB              -      64.11 MiB    +3.16 MiB            -  warm-up
+[Info]   process.private_bytes                       54.09 MiB              -      64.54 MiB   +10.44 MiB            -  warm-up
+[Info]   process.heap_in_use_bytes                   45.38 MiB              -      47.93 MiB    +2.55 MiB            -  warm-up
+[Info]   process.heap_free_bytes                     307.0 KiB              -      193.3 KiB   -113.7 KiB            -  warm-up
+[Info]   amx.script1.heap_bytes                              0              -              0            0            -  warm-up
+[Info]   amx.script1.stack_bytes                             0              -              0            0            -  warm-up
+[Info]   server.timers                                       0              -              1           +1            -  warm-up
+[Info]   server.db_connections                               0              -              0            0            -  warm-up
+[Info]   server.db_result_sets                               0              -              0            0            -  warm-up
+[Info]   Interpretation:
+[Info]   - Warm-up in progress (111 s left): changes now are classified as startup, not as growth.
+[Info]   - Process memory so far in this phase: +10.4 MiB.
+[Info] Tracked allocations (only what MemGuard X observes; not the whole process)
+[Info]   category                     allocs      frees     active  active size       peak    peak size      dup  unknown   double
+[Info]   pool.player                       0          0          0          n/a          0          n/a        0        0        0
+[Info]   pool.vehicle                      3          1          2          n/a          3          n/a        0        0        0
+[Info]   pool.object                     135          0        135          n/a        135          n/a        0        0        0
+[Info]   pool.textlabel                    0          0          0          n/a          0          n/a        0        0        0
+[Info]   pool.pickup                       0          0          0          n/a          0          n/a        0        0        0
+[Info]   pool.actor                        0          0          0          n/a          0          n/a        0        0        0
+[Info]   pool.gangzone                     0          0          0          n/a          0          n/a        0        0        0
+[Info]   pool.textdraw                     0          0          0          n/a          0          n/a        0        0        0
+[Info]   pool.menu                         0          0          0          n/a          0          n/a        0        0        0
+[Info]   script.inventory_78               3          1          1         50 B          2        150 B        1        1        1
+[Info]   total active: 138, total active (known sizes): 50 B, confirmed tracking errors: 3
+[Info] Recent confirmed tracking errors (newest last)
+[Info]   allocation of an id that was still active: category 'script.inventory_78' id 2 (6.37 ms after start)
+[Info]   double free: category 'script.inventory_78' id 1 (6.47 ms after start)
+[Info]   free of unknown id: category 'script.inventory_78' id 77 (6.53 ms after start)
+[Info] Oldest active tracked allocations (active != leaked)
+[Info]   #3 script.inventory_78  id=2            size=50 B       age=9.924 s
+[Info]   #4 pool.vehicle         id=1            size=n/a        age=9.923 s
+[Info]   #6 pool.vehicle         id=3            size=n/a        age=9.923 s
+[Info] [MemGuardX] New memory phase: gamemode restart (warm-up 120 s).
+[Info] [MemGuardX] Attached to Pawn script id 2 (17 natives), native profiling on
+[Info] MGTEST PASS native GetMaxPlayers profiled exactly 1000 times (got 1000)
+[Info] MGTEST PASS MemGuard_ProfileEnd closes the zone (got 1)
+[Info] MGTEST PASS MemGuard_ProfileEnd closes the zone (got 1)
+[Info] MGTEST PASS MemGuard_ProfileEnd closes the zone (got 1)
+[Info] MGTEST PASS MemGuard_ProfileEnd closes the zone (got 1)
+[Info] MGTEST PASS MemGuard_ProfileEnd closes the zone (got 1)
+[Info] MGTEST PASS script zone test_section recorded 5 times (got 5)
+[Info] MGTEST PASS native format profiled inside the zone (>= 1000) (got 2001)
+[Info] MGTEST PASS ending a zone that is not open returns 0 (got 0)
+[Info] MGTEST PASS TrackAlloc id 1 (got 1)
+[Info] MGTEST PASS TrackAlloc id 2 (got 1)
+[Info] MGTEST PASS TrackAlloc of an active id reports duplicate (got 2)
+[Info] MGTEST PASS TrackFree id 1 released (got 1)
+[Info] MGTEST PASS second TrackFree id 1 is a double free (got -2)
+[Info] MGTEST PASS TrackFree of unknown id 77 (got -1)
+[Info] MGTEST PASS inventory has 1 active entry (got 1)
+[Info] MGTEST PASS 3 vehicles tracked after CreateVehicle (got 3)
+[Info] MGTEST PASS 2 vehicles tracked after DestroyVehicle (got 2)
+[Info] MGTEST PASS MemGuard_Snapshot returns a sequence number (got 25)
+[Info] MGTEST PASS MemGuard_WriteReport succeeded (got 1)
+[Info] MGTEST leak phase finished, objects created: 120, tracked active objects: 120
+[Info] MGTEST PASS pool.object active count matches leaked objects (got 120)
+[Info] MGTEST SUMMARY pass=21 fail=0
+[Info] Top 4 zones by total (inclusive) time
+[Info]   name                                 kind            calls        total         self          avg          max     slow
+[Info]   server.tick_interval                 interval         6382     31.918 s     31.918 s      5.00 ms     36.23 ms        0
+[Info]   memguard.report                      internal           10      8.61 ms      8.61 ms    860.67 us      1.15 ms        0
+[Info]   memguard.snapshot                    internal           33      5.98 ms      5.98 ms    181.13 us    615.52 us        0
+[Info]   printf                               native             46      1.67 ms      1.67 ms     36.32 us    120.91 us        0
+[Info] Snapshot #35 captured with 22 metrics
+[Info]   tracked.pool.player.active               0
+[Info]   tracked.pool.vehicle.active              2
+[Info]   tracked.pool.object.active               135
+[Info]   tracked.pool.textlabel.active            0
+[Info]   tracked.pool.pickup.active               0
+[Info]   tracked.pool.actor.active                0
+[Info]   tracked.pool.gangzone.active             0
+[Info]   tracked.pool.textdraw.active             0
+[Info]   tracked.pool.menu.active                 0
+[Info]   tracked.script.inventory_78.active       1
+[Info]   tracked.script.inventory_78.bytes        50 B
+[Info]   tracked.script.inventory_23014.active    1
+[Info]   tracked.script.inventory_23014.bytes     50 B
+[Info]   process.resident_bytes                   64.36 MiB
+[Info]   process.private_bytes                    64.80 MiB
+[Info]   process.heap_in_use_bytes                48.13 MiB
+[Info]   process.heap_free_bytes                  263.7 KiB
+[Info]   amx.script2.heap_bytes                   0
+[Info]   amx.script2.stack_bytes                  0
+[Info]   server.timers                            1
+[Info]   server.db_connections                    0
+[Info]   server.db_result_sets                    0
+[Info] [MemGuardX] MemGuard X shutting down: 13 zones profiled, 152 tracked allocations still active, 6 confirmed tracking errors. Final report written to memguard_report.txt.

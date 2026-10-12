@@ -1,0 +1,188 @@
+==================== MemGuard X report - 2026-10-12 14:20:35 ====================
+MemGuard X status
+  host: open.mp 1.5.8.3079, 32-bit process
+  started: 2026-10-12 14:20:01, uptime 33.947 s
+  recording: on, native profiling: on, pool tracking: on, log level: info
+  zones registered: 13, snapshots taken: 35 (kept 35), reports written: 10
+  profiler frame anomalies: abandoned=0 unmatched-end=2 depth-overflow=0
+  measured profiler cost per instrumented call: ~243 ns
+  log messages: 7 emitted, 3 rate-limited
+
+Top 15 native by total (inclusive) time
+  name                                 kind            calls        total         self          avg          max     slow
+  CreateObject                         native            300      1.70 ms      1.70 ms      5.67 us     53.93 us        0
+  printf                               native             46      1.67 ms      1.67 ms     36.32 us    120.91 us        0
+  format                               native           2002    220.26 us    220.26 us       110 ns     18.67 us        0
+  GetMaxPlayers                        native           2000    212.72 us    212.72 us       106 ns      3.15 us        0
+  float                                native            600     44.59 us     44.59 us        74 ns      1.04 us        0
+  CreateVehicle                        native              6     30.36 us     30.36 us      5.06 us     17.45 us        0
+  SetTimer                             native              2      8.88 us      8.88 us      4.44 us      5.39 us        0
+  DestroyVehicle                       native              2      6.51 us      6.51 us      3.25 us      3.29 us        0
+  GetTickCount                         native              2      1.50 us      1.50 us       748 ns       777 ns        0
+
+Top 15 native by call count
+  name                                 kind            calls        total         self          avg          max     slow
+  format                               native           2002    220.26 us    220.26 us       110 ns     18.67 us        0
+  GetMaxPlayers                        native           2000    212.72 us    212.72 us       106 ns      3.15 us        0
+  float                                native            600     44.59 us     44.59 us        74 ns      1.04 us        0
+  CreateObject                         native            300      1.70 ms      1.70 ms      5.67 us     53.93 us        0
+  printf                               native             46      1.67 ms      1.67 ms     36.32 us    120.91 us        0
+  CreateVehicle                        native              6     30.36 us     30.36 us      5.06 us     17.45 us        0
+  DestroyVehicle                       native              2      6.51 us      6.51 us      3.25 us      3.29 us        0
+  GetTickCount                         native              2      1.50 us      1.50 us       748 ns       777 ns        0
+  SetTimer                             native              2      8.88 us      8.88 us      4.44 us      5.39 us        0
+
+Top 15 native by maximum single-call time
+  name                                 kind            calls        total         self          avg          max     slow
+  printf                               native             46      1.67 ms      1.67 ms     36.32 us    120.91 us        0
+  CreateObject                         native            300      1.70 ms      1.70 ms      5.67 us     53.93 us        0
+  format                               native           2002    220.26 us    220.26 us       110 ns     18.67 us        0
+  CreateVehicle                        native              6     30.36 us     30.36 us      5.06 us     17.45 us        0
+  SetTimer                             native              2      8.88 us      8.88 us      4.44 us      5.39 us        0
+  DestroyVehicle                       native              2      6.51 us      6.51 us      3.25 us      3.29 us        0
+  GetMaxPlayers                        native           2000    212.72 us    212.72 us       106 ns      3.15 us        0
+  float                                native            600     44.59 us     44.59 us        74 ns      1.04 us        0
+  GetTickCount                         native              2      1.50 us      1.50 us       748 ns       777 ns        0
+
+Top 15 function by total (inclusive) time
+  (no samples recorded: no Pawn function is instrumented. Add MEMGUARD_FUNC("name"); to functions
+   or build the script with tools/memguard_instrument - see docs/PAWN_PROFILING.md)
+
+Top 15 function by self (exclusive) time
+  (no samples recorded: no Pawn function is instrumented. Add MEMGUARD_FUNC("name"); to functions
+   or build the script with tools/memguard_instrument - see docs/PAWN_PROFILING.md)
+
+Top 15 function by call count
+  (no samples recorded: no Pawn function is instrumented. Add MEMGUARD_FUNC("name"); to functions
+   or build the script with tools/memguard_instrument - see docs/PAWN_PROFILING.md)
+
+Top 15 script by total (inclusive) time
+  name                                 kind            calls        total         self          avg          max     slow
+  test_section                         script             10    707.47 us    487.99 us     70.75 us     98.94 us        0
+
+Top 15 interval by total (inclusive) time
+  name                                 kind            calls        total         self          avg          max     slow
+  server.tick_interval                 interval         6783     33.923 s     33.923 s      5.00 ms     36.23 ms        0
+
+Top 15 internal by total (inclusive) time
+  name                                 kind            calls        total         self          avg          max     slow
+  memguard.report                      internal           10      8.61 ms      8.61 ms    860.67 us      1.15 ms        0
+  memguard.snapshot                    internal           35      6.37 ms      6.37 ms    182.13 us    615.52 us        0
+
+Tracked allocations (only what MemGuard X observes; not the whole process)
+  category                     allocs      frees     active  active size       peak    peak size      dup  unknown   double
+  pool.player                       0          0          0          n/a          0          n/a        0        0        0
+  pool.vehicle                      6          4          0          n/a          3          n/a        0        0        0
+  pool.object                     300        150        150          n/a        150          n/a        0        0        0
+  pool.textlabel                    0          0          0          n/a          0          n/a        0        0        0
+  pool.pickup                       0          0          0          n/a          0          n/a        0        0        0
+  pool.actor                        0          0          0          n/a          0          n/a        0        0        0
+  pool.gangzone                     0          0          0          n/a          0          n/a        0        0        0
+  pool.textdraw                     0          0          0          n/a          0          n/a        0        0        0
+  pool.menu                         0          0          0          n/a          0          n/a        0        0        0
+  script.inventory_78               3          1          1         50 B          2        150 B        1        1        1
+  script.inventory_23014            3          1          1         50 B          2        150 B        1        1        1
+  total active: 152, total active (known sizes): 100 B, confirmed tracking errors: 6
+Recent confirmed tracking errors (newest last)
+  allocation of an id that was still active: category 'script.inventory_78' id 2 (6.37 ms after start)
+  double free: category 'script.inventory_78' id 1 (6.47 ms after start)
+  free of unknown id: category 'script.inventory_78' id 77 (6.53 ms after start)
+  allocation of an id that was still active: category 'script.inventory_23014' id 2 (22.943 s after start)
+  double free: category 'script.inventory_23014' id 1 (22.943 s after start)
+  free of unknown id: category 'script.inventory_23014' id 77 (22.943 s after start)
+Oldest active tracked allocations (active != leaked)
+  #3 script.inventory_78  id=2            size=50 B       age=33.941 s
+  #159 script.inventory_23014 id=2            size=50 B       age=11.005 s
+  #163 pool.object          id=1            size=n/a        age=10.001 s
+  #164 pool.object          id=2            size=n/a        age=10.001 s
+  #165 pool.object          id=3            size=n/a        age=10.001 s
+  #166 pool.object          id=4            size=n/a        age=10.001 s
+  #167 pool.object          id=5            size=n/a        age=10.001 s
+  #168 pool.object          id=6            size=n/a        age=10.001 s
+  #169 pool.object          id=7            size=n/a        age=10.001 s
+  #170 pool.object          id=8            size=n/a        age=10.001 s
+  #171 pool.object          id=9            size=n/a        age=10.001 s
+  #172 pool.object          id=10           size=n/a        age=10.001 s
+  #173 pool.object          id=11           size=n/a        age=10.001 s
+  #174 pool.object          id=12           size=n/a        age=10.001 s
+  #175 pool.object          id=13           size=n/a        age=10.001 s
+  #176 pool.object          id=14           size=n/a        age=10.001 s
+  #177 pool.object          id=15           size=n/a        age=10.001 s
+  #178 pool.object          id=16           size=n/a        age=9.001 s
+  #179 pool.object          id=17           size=n/a        age=9.001 s
+  #180 pool.object          id=18           size=n/a        age=9.001 s
+
+Snapshot history (35 stored)
+  comparing snapshot #32 (2026-10-12 14:20:31) with #35 (2026-10-12 14:20:34)
+  metric                                             before            after           change
+  tracked.pool.player.active                              0                0                0
+  tracked.pool.vehicle.active                             2                2                0
+  tracked.pool.object.active                            105              135              +30
+  tracked.pool.textlabel.active                           0                0                0
+  tracked.pool.pickup.active                              0                0                0
+  tracked.pool.actor.active                               0                0                0
+  tracked.pool.gangzone.active                            0                0                0
+  tracked.pool.textdraw.active                            0                0                0
+  tracked.pool.menu.active                                0                0                0
+  tracked.script.inventory_78.active                      1                1                0
+  tracked.script.inventory_78.bytes                    50 B             50 B              0 B
+  tracked.script.inventory_23014.active                   1                1                0
+  tracked.script.inventory_23014.bytes                 50 B             50 B              0 B
+  process.resident_bytes                          64.36 MiB        64.36 MiB              0 B
+  process.private_bytes                           64.80 MiB        64.80 MiB              0 B
+  process.heap_in_use_bytes                       47.84 MiB        48.13 MiB       +291.7 KiB
+  process.heap_free_bytes                         555.3 KiB        263.7 KiB       -291.7 KiB
+  amx.script2.heap_bytes                                  0                0                0
+  amx.script2.stack_bytes                                 0                0                0
+  server.timers                                           1                1                0
+  server.db_connections                                   0                0                0
+  server.db_result_sets                                   0                0                0
+
+Growth analysis after warm-up (window 4 snapshots, min +10%, min +10 count / +8 MiB)
+  warm-up (120 s after gamemode restart) not finished yet: growth is not evaluated
+
+Memory assessment (phase: gamemode restart, warm-up 120 s)
+  metric                                    phase start    warm-up end            now      startup   since w-up  trend
+  tracked.pool.player.active                          0              -              0            0            -  warm-up
+  tracked.pool.vehicle.active                         2              -              2            0            -  warm-up
+  tracked.pool.object.active                          0              -            135         +135            -  warm-up
+  tracked.pool.textlabel.active                       0              -              0            0            -  warm-up
+  tracked.pool.pickup.active                          0              -              0            0            -  warm-up
+  tracked.pool.actor.active                           0              -              0            0            -  warm-up
+  tracked.pool.gangzone.active                        0              -              0            0            -  warm-up
+  tracked.pool.textdraw.active                        0              -              0            0            -  warm-up
+  tracked.pool.menu.active                            0              -              0            0            -  warm-up
+  tracked.script.inventory_78.active                  1              -              1            0            -  warm-up
+  tracked.script.inventory_78.bytes                50 B              -           50 B          0 B            -  warm-up
+  tracked.script.inventory_23014.active               1              -              1            0            -  warm-up
+  tracked.script.inventory_23014.bytes             50 B              -           50 B          0 B            -  warm-up
+  process.resident_bytes                      64.36 MiB              -      64.36 MiB          0 B            -  warm-up
+  process.private_bytes                       64.80 MiB              -      64.80 MiB          0 B            -  warm-up
+  process.heap_in_use_bytes                   46.86 MiB              -      48.13 MiB    +1.27 MiB            -  warm-up
+  process.heap_free_bytes                      1.53 MiB              -      263.7 KiB    -1.27 MiB            -  warm-up
+  amx.script2.heap_bytes                              0              -              0            0            -  warm-up
+  amx.script2.stack_bytes                           180              -              0         -180            -  warm-up
+  server.timers                                       0              -              1           +1            -  warm-up
+  server.db_connections                               0              -              0            0            -  warm-up
+  server.db_result_sets                               0              -              0            0            -  warm-up
+  Interpretation:
+  - Warm-up in progress (110 s left): changes now are classified as startup, not as growth.
+  - Process memory so far in this phase: +0.0 MiB.
+
+What MemGuard X can and cannot see
+  exact     : open.mp pool entities (counts only, no byte sizes), script-reported allocations
+              (MemGuard_TrackAlloc: counts and the sizes the script reports), timers, DB handles,
+              AMX heap/stack usage of each script
+  measured  : process resident/private memory; C heap in use / free-retained (glibc mallinfo2).
+              Whole-process numbers: they include every component and plugin and cannot be
+              attributed to individual allocations.
+  not seen  : allocations made inside other components/plugins or the server, per-player
+              objects/textdraws, memory of data structures inside the AMX beyond heap/stack usage,
+              allocator internals. A leak there shows up only as process/heap growth.
+  rule      : an active allocation is never reported as leaked; only sustained growth after warm-up is
+              flagged as a possible leak, and only double/unknown frees are confirmed tracking errors.
+
+Notes: 'active' tracked allocations are not leaks by themselves. 'POSSIBLE LEAK' means sustained growth
+across snapshots and needs investigation. Only double/unknown frees and duplicate allocations are confirmed
+tracking errors. Native times are inclusive of anything the native itself executes (e.g. CallLocalFunction).
+

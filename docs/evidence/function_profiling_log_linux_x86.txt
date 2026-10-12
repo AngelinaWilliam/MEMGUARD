@@ -1,0 +1,112 @@
+Starting open.mp server (1.5.8.3079) from commit c6759bd8d265171ae3d86598895a23d5a8d92a3b
+Running static OpenSSL build - plugins that use OpenSSL might crash (discord-connector, pawn-requests). It's recommended to use the dynssl build.
+Loading component Menus.so
+	Successfully loaded component Menus (1.5.8.3079) with UID 621e219eb97ee0b2
+Loading component MemGuardX.so
+	Successfully loaded component MemGuard X (0.2.0.0) with UID 4208a60f1c13f660
+Loaded 23 component(s) from /omp/components
+[Info] [MemGuardX] MemGuard X 0.2.0 loaded (open.mp 1.5.8.3079, 32-bit process). Recording on, native profiling on, pool tracking on. Profiler cost ~263 ns per instrumented call.
+[Info] [MemGuardX] Ready: 9 pool watcher(s) active, Pawn integration available. Type 'memguard help' in the console.
+[Info] [MemGuardX] Attached to Pawn script id 1 (16 natives), native profiling on
+[Info] OUT Scale 6.00 1.00
+[Info] OUT IsBig 1 0
+[Info] OUT MakeName player_7
+[Info] OUT SetRef 300 9
+[Info] OUT SetRef2 -1
+[Info] OUT SumArgs 10
+[Info] OUT Fib 55
+[Info] OUT Pick 10 12 7
+[Info] OUT Void 2
+[Info] OUT Outer 14987
+[Info] OUT Public 7 7
+[Info] OUT instrumented=1
+[Info] MGTEST PASS component version matches memguard.inc (got 512)
+[Info] MGTEST PASS Fib(10) recursion recorded 177 calls (got 177)
+[Info] MGTEST PASS SetRef: every early/late return closes its frame (got 100)
+[Info] MGTEST PASS Pick: returns inside switch cases (got 30)
+[Info] MGTEST PASS function without return statement (got 1)
+[Info] MGTEST PASS Outer called 50 times (got 50)
+[Info] MGTEST PASS nested Inner called 100 times (got 100)
+[Info] MGTEST PASS MemGuard_GetZoneStats finds Outer (got 1)
+[Info] MGTEST INFO Outer total=3500us self=63us, Inner total=2724us
+[Info] MGTEST PASS Outer inclusive time >= Inner inclusive time (got 3500)
+[Info] MGTEST PASS Outer self time < inclusive time (nested time excluded) (got 63)
+[Info] MGTEST PASS unknown zone returns 0 and zeroed outputs (got 0)
+[Info] MGTEST PASS public called through CallLocalFunction is profiled (got 1)
+[Info] MGTEST PASS excluded function has no zone (got 0)
+[Info] MGTEST INFO 100000 calls: instrumented 59 ms, uninstrumented 1 ms (acc 1410165408)
+[Info] Legacy Network started on port 7777
+[Info] MGTEST INFO calling Faulty(5): a runtime error is expected next
+[Error] SetTimer(Ex): There was a problem in calling FaultyTimer: Array index out of bounds
+[Info] MGTEST PASS profiling still correct after an aborted callback (got 10)
+[Info] MGTEST PASS aborted function is not recorded as a completed call (got 0)
+[Info] MGTEST SUMMARY pass=15 fail=0
+[Info] [MemGuardX] Warm-up after server start finished; memory growth from now on is checked for leaks.
+[Info] Top 5 function by total (inclusive) time
+[Info]   name                                 kind            calls        total         self          avg          max     slow
+[Info]   OnGameModeInit                       function            1     65.68 ms     32.94 ms     65.68 ms     65.68 ms        1
+[Info]   Trivial                              function       100000     28.02 ms     28.02 ms       280 ns    109.31 us        0
+[Info]   Outer                                function           51      3.50 ms     63.44 us     68.64 us    153.18 us        0
+[Info]   Busy                                 function          153      3.38 ms      3.38 ms     22.09 us    114.52 us        0
+[Info]   Inner                                function          102      2.72 ms     57.73 us     26.71 us    115.46 us        0
+[Info] [MemGuardX] New memory phase: gamemode restart (warm-up 3 s).
+[Info] [MemGuardX] Attached to Pawn script id 2 (16 natives), native profiling on
+[Info] OUT Scale 6.00 1.00
+[Info] OUT IsBig 1 0
+[Info] OUT MakeName player_7
+[Info] OUT SetRef 300 9
+[Info] OUT SetRef2 -1
+[Info] OUT SumArgs 10
+[Info] OUT Fib 55
+[Info] OUT Pick 10 12 7
+[Info] OUT Void 2
+[Info] OUT Outer 14987
+[Info] OUT Public 7 7
+[Info] OUT instrumented=1
+[Info] MGTEST PASS component version matches memguard.inc (got 512)
+[Info] MGTEST PASS Fib(10) recursion recorded 177 calls (got 177)
+[Info] MGTEST PASS SetRef: every early/late return closes its frame (got 100)
+[Info] MGTEST PASS Pick: returns inside switch cases (got 30)
+[Info] MGTEST PASS function without return statement (got 1)
+[Info] MGTEST PASS Outer called 50 times (got 50)
+[Info] MGTEST PASS nested Inner called 100 times (got 100)
+[Info] MGTEST PASS MemGuard_GetZoneStats finds Outer (got 1)
+[Info] MGTEST INFO Outer total=6822us self=121us, Inner total=5332us
+[Info] MGTEST PASS Outer inclusive time >= Inner inclusive time (got 6822)
+[Info] MGTEST PASS Outer self time < inclusive time (nested time excluded) (got 121)
+[Info] MGTEST PASS unknown zone returns 0 and zeroed outputs (got 0)
+[Info] MGTEST PASS public called through CallLocalFunction is profiled (got 1)
+[Info] MGTEST PASS excluded function has no zone (got 0)
+[Info] MGTEST INFO 100000 calls: instrumented 56 ms, uninstrumented 1 ms (acc 1410165408)
+[Info] MGTEST INFO calling Faulty(5): a runtime error is expected next
+[Error] SetTimer(Ex): There was a problem in calling FaultyTimer: Array index out of bounds
+[Info] MGTEST PASS profiling still correct after an aborted callback (got 10)
+[Info] MGTEST PASS aborted function is not recorded as a completed call (got 0)
+[Info] MGTEST SUMMARY pass=15 fail=0
+[Info] [MemGuardX] Warm-up after gamemode restart finished; memory growth from now on is checked for leaks.
+[Info] Growth analysis after warm-up (window 4 snapshots, min +10%, min +10 count / +8 MiB)
+[Info]   no sustained growth detected
+[Info] Memory assessment (phase: gamemode restart, warm-up 3 s)
+[Info]   metric                                    phase start    warm-up end            now      startup   since w-up  trend
+[Info]   tracked.pool.player.active                          0              0              0            0            0  stable
+[Info]   tracked.pool.vehicle.active                         0              0              0            0            0  stable
+[Info]   tracked.pool.object.active                          0              0              0            0            0  stable
+[Info]   tracked.pool.textlabel.active                       0              0              0            0            0  stable
+[Info]   tracked.pool.pickup.active                          0              0              0            0            0  stable
+[Info]   tracked.pool.actor.active                           0              0              0            0            0  stable
+[Info]   tracked.pool.gangzone.active                        0              0              0            0            0  stable
+[Info]   tracked.pool.textdraw.active                        0              0              0            0            0  stable
+[Info]   tracked.pool.menu.active                            0              0              0            0            0  stable
+[Info]   process.resident_bytes                      62.68 MiB      62.68 MiB      62.68 MiB          0 B     +8.0 KiB  stable
+[Info]   process.private_bytes                       63.38 MiB      63.38 MiB      63.50 MiB          0 B   +132.0 KiB  stable
+[Info]   process.heap_in_use_bytes                   46.83 MiB      46.83 MiB      46.85 MiB     +5.9 KiB    +15.1 KiB  stable
+[Info]   process.heap_free_bytes                     137.3 KiB      131.4 KiB      244.3 KiB     -5.9 KiB   +112.9 KiB  stable
+[Info]   amx.script2.heap_bytes                              0              0              0            0            0  stable
+[Info]   amx.script2.stack_bytes                             0              0              0            0            0  stable
+[Info]   server.timers                                       2              0              0           -2            0  stable
+[Info]   server.db_connections                               0              0              0            0            0  stable
+[Info]   server.db_result_sets                               0              0              0            0            0  stable
+[Info]   Interpretation:
+[Info]   - No metric is rising in the recent snapshots.
+[Info] Report written to memguard_report.txt
+[Info] [MemGuardX] MemGuard X shutting down: 35 zones profiled, 0 tracked allocations still active, 0 confirmed tracking errors.
